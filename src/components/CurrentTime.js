@@ -16,12 +16,15 @@ export default class CurrentTime extends Component {
  
          let today = new Date(); 
          let hours = today.getHours();
-         let minutes = today.getMinutes()
-         let seconds = today.getSeconds()
+         let amOrpm = hours >= 12 ? 'pm' : 'am'
+        hours = (hours % 12) || 12
+         let minutes = today.getMinutes();
+         let seconds = today.getSeconds();
 
-         let currentTimeOfDay = hours + ":" + minutes + ":" + seconds
+         let currentTimeOfDay = hours + ":" + minutes + ":" + seconds + amOrpm;
 
-         console.log(currentTimeOfDay)
+         return currentTimeOfDay;
+
      }
 
 
