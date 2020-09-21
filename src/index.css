@@ -22,3 +22,8 @@ top: 200px;
 box-shadow: tan;
 border: solid;
 }
+
+
+.current-time {
+  text-align: center;
+}
